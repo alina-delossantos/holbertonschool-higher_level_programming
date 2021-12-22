@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 
 
-def printdigit(nbr):
-    lastdigit = 0
-    if nbr >= 0:
-        lastdigit = nbr % 10
+def print_last_digit(number):
+    last_digit = 0
+    if number >= 0:
+        last_digit = number % 10
     else:
-        lastdigit = 10 - (nbr % 10)
+        last_digit = 10 - (number % 10)
 
-    print('{:d}'.format(lastdigit), end='')
-    return lastdigit
+    print('{:d}'.format(last_digit), end='')
+    return last_digit
 
 
 if __name__ == '__main__':
-    printdigit(12345)
+    print_last_digit(12345)
