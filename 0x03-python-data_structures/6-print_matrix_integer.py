@@ -10,6 +10,6 @@ def print_matrix_integer(matrix=[[]]):
                 if subitem == y - 1:
                     print('{:d}'.format(matrix[item][subitem]))
                 else:
-                    print('{:d}'.format(matrix[item][subitem]), end='')
+                    print('{:d} '.format(matrix[item][subitem]), end='')
     else:
         print()
