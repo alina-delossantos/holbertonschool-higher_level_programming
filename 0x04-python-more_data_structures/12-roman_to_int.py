@@ -2,7 +2,6 @@
 
 
 def roman_to_int(roman_string):
-    if roman_string is not None and type(roman_string) == str:
         r_t = {
             "I": 1,
             "V": 5,
@@ -12,6 +11,9 @@ def roman_to_int(roman_string):
             "D": 500,
             "M": 1000
         }
+
+        if roman_string is None or type(roman_string) != str:
+            return 0
 
         decimal = 0
 
