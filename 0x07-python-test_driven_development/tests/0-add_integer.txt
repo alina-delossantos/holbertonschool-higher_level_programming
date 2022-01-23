@@ -1,0 +1,12 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+Importing fx from module:
+	  >>> add_integer = _import_("0-add_integer").add_integer
+
+Checks sum of positive nbrs
+       >>> add_integer(7, 2):
+       9
