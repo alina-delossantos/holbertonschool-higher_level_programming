@@ -5,15 +5,15 @@ Using ``add_integer``
 -------------------
 
 Importing fx from module
-	  >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
 
 Checks sum of positive nbrs:
-       >>> add_integer(7, 2)
-       9
+    >>> add_integer(7, 2)
+    9
 
 Ckecks sum of negative and positive nbr:
-       >>> add_integer(-1, 8)
-       7
+    >>> add_integer(-1, 8)
+    7
 
 Checks sum of positive and negative nbr:
        >>> add_integer(1, -8)

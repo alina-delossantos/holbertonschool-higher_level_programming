@@ -1,46 +1,46 @@
-========================================
-3-say_my_name.py module
-========================================
+The ``3-say_my_name`` module
+======================
 
-``say_my_name()`` function that prints name
+Using ``say_my_name``
+-------------------
 
-Imports fx from the module:
-	>>> say_my_name = __import__("3-say_my_name").say_my_name
+Importing fx from module:
+	  >>> say_my_name = __import__("3-say_my_name").say_my_name
 
-Checks when first name is None
-       >>> say_my_name = (None, "Doe")
-       Traceback (most recent call last):
-       ...
-       TypeError: first_name must be a string
+checks regular input:
+        >>> say_my_name("John", "Doe")
+	My name is John Doe
 
-Checks when last name is None
-       >>> say_my_name = ("John", None)
-       Traceback (most recent call last):
-       ...
-       TypeError: last_name must be a string
+checks when first name is None:
+        >>> say_my_name(None, "John")
+	Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
 
-Checks regular input
-       >>> say_my_name = ("John", "Doe")
-       My name is John Doe
+checks when last name is None:
+        >>> say_my_name("John", None)
+	Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
 
-Checks when input only one argument
-       >>> say_my_name = ("Scar")
-       My name is Scar
+checks when input contains 1 argument:
+        >>> say_my_name("John")
+	My name is John
 
-Checks when first name is of wrong type
-       >>> say_my_name = ((1), "Doe")
-       Traceback (most recent call last):
-       ...
-       TypeError: first_name must be a string
+checks when first name is not a string:
+         >>> say_my_name((1), "John")
+         Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
 
-Chekcs when last name is of wrong type
-       >>> say_my_name = ("John", [7])
-       Traceback (most recent call last):
-       ...
-       TypeError: last_name must be a string
+checks when last name is not a string:
+         >>> say_my_name("John", 7)
+         Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
 
-Checks when more than two arguments
-       >>> say_my_name = ("John", "Doe", "Smith")
-       Traceback (most recent call last):
-       ...
-       TypeError: say_my_name() takes 2 positional arguments but more were given
+checks when input has more than 2 arguments:
+        >>> say_my_name("John", "Doe", "hi")
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
