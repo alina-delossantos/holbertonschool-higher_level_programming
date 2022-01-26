@@ -1,4 +1,4 @@
- #!/usr/bin/python3
+#!/usr/bin/python3
 """
     Matrix division: divides all elements of a matrix
 """
