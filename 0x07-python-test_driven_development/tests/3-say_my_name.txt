@@ -24,7 +24,7 @@ checks when last name is None:
         TypeError: last_name must be a string
 
 checks when input contains 1 argument:
-        >>> say_my_name("John")
+        >>> say_my_name("John", )
 	My name is John
 
 checks when first name is not a string:
