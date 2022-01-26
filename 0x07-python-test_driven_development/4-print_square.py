@@ -5,6 +5,7 @@ This is the "4-print_square" module
 It provides the print_square fx
 """
 
+
 def print_square(size):
     """prints a square with # of size n"""
     if size < 0:
