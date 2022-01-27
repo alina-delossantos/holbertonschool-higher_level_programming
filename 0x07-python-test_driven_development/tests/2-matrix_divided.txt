@@ -111,7 +111,7 @@ Checks when div is None:
 
 Checks when div is infinite:
        >>> matrix_divided(matrix, float('inf'))
-       [[0, 0, 0], [0, 0, 0]]
+       [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
 Checks when matrix is empty:
        >>> matrix = []
