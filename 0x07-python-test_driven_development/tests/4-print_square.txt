@@ -50,7 +50,6 @@ Checks when non-int is passed:
         TypeError: size must be an integer
 
 Checks when non-nbr is passed:
-
         >>> print_square("3")
 	Traceback (most recent call last):
         ...
