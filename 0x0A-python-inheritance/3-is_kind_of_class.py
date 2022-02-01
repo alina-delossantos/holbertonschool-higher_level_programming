@@ -7,6 +7,4 @@ def is_kind_of_class(obj, a_class):
         obj (obj): object
         a_class (class): class to be compared with
     """
-    if isinstance(obj, a_class):
-        return True
-    return False
+    return isinstance(obj, a_class)
