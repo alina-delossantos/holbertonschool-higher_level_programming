@@ -3,32 +3,32 @@
  * insert_node - inserts a number into a sorted singly linked list
  * @head: head
  * @number: nbr to be inserted
- * Return: adress of new node or NULL
+ * Return: listint_t*
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *present_node, *new, *previous = NULL;
+	listint_t *present, *new, *previous = NULL;
 
 	if (head == NULL)
 		return (NULL);
-	present_node = *head;
-	while (present_node != NULL)
+	present = *head;
+	while (present != NULL)
 	{
-		if (present_node->n > number)
+		if (present->n > number)
 		{
 			new = malloc(sizeof(listint_t));
 			if (new == NULL)
 				return (NULL);
-			if (previous != NULL)
+			if (present != NULL)
 				previous->next = new;
-			new->next = present_node;
-			if (present_node == *head)
+			new->next = present;
+			if (present == *head)
 				*head = new;
 			new->n = number;
 			return (new);
 		}
-		previous = present_node;
-		present_node = present_node->next;
+		previous = present;
+		present = present->next;
 	}
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
