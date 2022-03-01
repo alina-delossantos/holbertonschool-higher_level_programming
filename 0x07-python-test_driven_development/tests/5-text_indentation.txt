@@ -1,0 +1,116 @@
+
+5-text_indentation.txt
+============================================================
+
+``text_indentation(text)`` prints a text with 2 new lines
+
+""" Import fx """
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Checks for string with .
+
+       >>> text_indentation("ACA. 2022")
+       ACA.
+       <BLANKLINE>
+       2022
+
+Checks for string with ?
+
+       >>> text_indentation("Golliat?Cat")
+       Golliat?
+       <BLANKLINE>
+       Cat
+
+Checks for string with .
+
+       >>> text_indentation("Seeya. Looks. :)")
+       Seeya.
+       <BLANKLINE>
+       Looks.
+       <BLANKLINE>
+       :
+       <BLANKLINE>
+       )
+
+       Checks for string with :
+
+       >>> text_indentation("Cat: Golliat")
+       Cat:
+       <BLANKLINE>
+       Golliat
+
+       Checks for string with several special chars
+
+       >>> text_indentation("???:).:)")
+       ?
+       <BLANKLINE>
+       ?
+       <BLANKLINE>
+       ?
+       <BLANKLINE>
+       :
+       <BLANKLINE>
+       ).
+       <BLANKLINE>
+       :
+       <BLANKLINE>
+       )
+
+       Checks one special char
+
+       >>> text_indentation(".")
+       .
+       <BLANKLINE>
+
+       Checks string with nbr
+
+       >>> text_indentation(".:$777.")
+       .
+       <BLANKLINE>
+       :
+       <BLANKLINE>
+       $777.
+       <BLANKLINE>
+
+       Checks string with 2 nbr
+
+       >>> text_indentation("{7: 77}")
+       {7:
+       <BLANKLINE>
+       77}
+
+       Checks no arguments
+
+       >>> text_indentation()
+       Traceback (most recent call last):
+       ...
+       TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+       Checks only nbrs
+
+       >>> text_indentation({98.4: 12})
+       Traceback (most recent call last):
+       ...
+       TypeError: text must be a string
+
+       Checks passing None
+
+       >>> text_indentation(None)
+       Traceback (most recent call last):
+       ...
+       TypeError: text must be a string
+
+       Checks no string
+
+       >>> text_indentation(98)
+       Traceback (most recent call last):
+       ...
+       TypeError: text must be a string
+
+       Checks passng float
+
+       >>> text_indentation(98.4)
+       Traceback (most recent call last):
+       ...
+       TypeError: text must be a string
